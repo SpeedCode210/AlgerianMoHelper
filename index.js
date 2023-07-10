@@ -7,6 +7,7 @@ const config = require("./config.json");
 client.config = config;
 client.amo_login = require("./login").run;
 
+
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
