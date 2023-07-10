@@ -1,0 +1,29 @@
+{
+  "name": "algerian-mo-helper",
+  "version": "1.0.0",
+  "description": "A Discord Bot for AlgerianMO",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "csv": "^6.3.1",
+    "discord.js": "^12.5.1",
+    "enmap": "^5.8.4",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.2",
+    "text-to-image": "^5.2.0",
+    "unicodeit": "^0.7.5",
+    "xmldom": "^0.6.0"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "Template",
+    "javascript"
+  ]
+}
