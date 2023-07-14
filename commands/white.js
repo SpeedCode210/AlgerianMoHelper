@@ -51,10 +51,10 @@ exports.run = async (client, message, args) => {
     );
     if (b >= 25) {
         try {
-            message.mentions.members.first().roles.remove(client.config.trainingStartRole);
+            await message.mentions.members.first().roles.remove(client.config.trainingStartRole);
         } catch { }
         try {
-            message.mentions.members.first().roles.add(client.config.whiteRole);
+            await message.mentions.members.first().roles.add(client.config.whiteRole);
         } catch { }
         let users = require('../users.json');
         for (let u of users) {
@@ -78,10 +78,10 @@ exports.run = async (client, message, args) => {
             switch (r.emoji.name) {
                 case "✅":
                     try {
-                        message.mentions.members.first().roles.remove(client.trainingStartRole);
+                        await message.mentions.members.first().roles.remove(client.trainingStartRole);
                     } catch { }
                     try {
-                        message.mentions.members.first().roles.add(client.config.whiteRole);
+                        await message.mentions.members.first().roles.add(client.config.whiteRole);
                     } catch { }
                     msg.reactions.removeAll();
                     collector.stop();

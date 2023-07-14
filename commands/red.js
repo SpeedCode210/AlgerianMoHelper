@@ -39,16 +39,16 @@ exports.run = async (client, message, args) => {
         {
             case "✅":
                 try{
-                    message.mentions.members.first().roles.remove(client.config.trainingStartRole);
+                    await message.mentions.members.first().roles.remove(client.config.trainingStartRole);
                 }catch{}
                 try{
-                    message.mentions.members.first().roles.remove(client.config.whiteRole);
+                    await message.mentions.members.first().roles.remove(client.config.whiteRole);
                 }catch{}
                 try{
-                    message.mentions.members.first().roles.remove(client.config.greenRole);
+                    await message.mentions.members.first().roles.remove(client.config.greenRole);
                 }catch{}
                 try{
-                    message.mentions.members.first().roles.add(client.config.redRole);
+                    await message.mentions.members.first().roles.add(client.config.redRole);
                 }catch{}
                 msg.reactions.removeAll();
                 collector.stop();

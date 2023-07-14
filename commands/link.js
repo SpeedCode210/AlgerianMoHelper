@@ -27,13 +27,13 @@ exports.run = async (client, message, args) => {
         if(!exists)
             users.push({discord: message.mentions.users.first().id, id: args[1], team: "training-start"});
         jsonString = JSON.stringify(users);
-        fs.writeFile('./users.json', jsonString, err => {
+        fs.writeFile('./users.json', jsonString, async (err) => {
             if (err) {
                 console.log('Error writing file', err)
             } else {
                 message.channel.send("Linking done !");
                 try{
-                    message.mentions.members.first().roles.add(client.config.linkedRole);
+                    await message.mentions.members.first().roles.add(client.config.linkedRole);
                 }catch{}
             }
         });
