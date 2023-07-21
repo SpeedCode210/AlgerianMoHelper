@@ -116,18 +116,15 @@ exports.run = async (client, message, args) => {
                     await message.mentions.members.first().roles.remove(client.config.whiteRole);
                 }catch{}
                 try{
-                    await message.mentions.members.first().roles.remove(client.config.yellowRole);
-                }catch{}
-                try{
-                    await message.mentions.members.first().roles.add(client.config.greenRole);
+                    await message.mentions.members.first().roles.add(client.config.yellowRole);
                 }catch{}
                 msg.reactions.removeAll();
                 collector.stop();
-                msg.channel.send("Welcome to green !");
+                msg.channel.send("Welcome to yellow !");
                 let users = JSON.parse(fs.readFileSync('./users.json'));
                     for (let u of users) {
                         if (u.discord == message.mentions.users.first().id)
-                            u.team = "green";
+                            u.team = "yellow";
                     }
                     fs.writeFile('./users.json', JSON.stringify(users), err => {
                         if (err) {

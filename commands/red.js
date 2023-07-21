@@ -45,6 +45,9 @@ exports.run = async (client, message, args) => {
                     await message.mentions.members.first().roles.remove(client.config.whiteRole);
                 }catch{}
                 try{
+                    await message.mentions.members.first().roles.remove(client.config.yellowRole);
+                }catch{}
+                try{
                     await message.mentions.members.first().roles.remove(client.config.greenRole);
                 }catch{}
                 try{
