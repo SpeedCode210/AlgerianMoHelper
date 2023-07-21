@@ -96,7 +96,7 @@ exports.run = async (client, message, args) => {
     let msg = await message.channel.send(
         new Discord.MessageEmbed()
             .setTitle(document.getElementsByTagName("tbody")[0].getElementsByTagName("td")[0].textContent)
-            .setDescription(document.getElementsByTagName("tbody")[0].getElementsByTagName("td")[1].textContent + "\n**Points :** " + document.getElementsByTagName("tbody")[1].getElementsByTagName("td")[1].textContent + "\n**Rank :** " + document.getElementsByTagName("tbody")[1].getElementsByTagName("td")[3].textContent + '\n' + str1 + '\n' + str2 + "\n **Do you want to upgrade him to team green ?**")
+            .setDescription(document.getElementsByTagName("tbody")[0].getElementsByTagName("td")[1].textContent + "\n**Points :** " + document.getElementsByTagName("tbody")[1].getElementsByTagName("td")[1].textContent + "\n**Rank :** " + document.getElementsByTagName("tbody")[1].getElementsByTagName("td")[3].textContent + '\n' + str1 + '\n' + str2 + "\n **Do you want to upgrade him to team yellow ?**")
             .setColor("RANDOM")
             .setFooter("Algerian Maths Olympiad")
     );
